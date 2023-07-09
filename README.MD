@@ -1,1 +1,10 @@
-[![Presentation](img/smart-machines-580x420.jpg)](https://docs.google.com/presentation/d/1ZytlWKHZCcTelpaIbcD03HnoueMjMtD9/edit?usp=sharing&ouid=104475264526876525542&rtpof=true&sd=true)
+[Presentation URL](https://docs.google.com/presentation/d/1ZytlWKHZCcTelpaIbcD03HnoueMjMtD9/edit?usp=sharing&ouid=104475264526876525542&rtpof=true&sd=true)
+
+![Image home](img/home.png)
+![Image home](img/tableofcontent.png)
+![Image home](img/introduction.png)
+![Image home](img/overview.png)
+![Image home](img/benifits.png)
+![Image home](img/futurePosibility.png)
+![Image home](img/technology.png)
+![Image home](img/implementationChalange.png)
