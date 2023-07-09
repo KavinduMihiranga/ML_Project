@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mathine Learning</title>
+<style>
+    .headerTitle{
+    font-size:xx-large;
+    color: #0000007c;
+    font-family: sans-serif;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    
+}
+    #desc{
+    font-size:large;
+    }
+</style>    
+</head>
+
+<body>
+
+	<h1 class="headerTitle">What's It</h1>
+	<p class="headerTitle" id="desc">Please fill this form with your correct and true details</p>
+
+	<form action="http://127.0.0.1:5000/login" method="POST">
+		
+		<p>Name <input type="text" name="name"/> </p>
+		<p>Gender
+            <select>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+        </p>
+        <p><input type="file"></p>
+		<p><input type="submit" value="Submit Details"/></p>
+
+	</form>
+
+</body>
+</html>

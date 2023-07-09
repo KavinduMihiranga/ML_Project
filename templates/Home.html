@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mathine Learning</title>
+<style>
+    .headerTitle{
+    font-size:xx-large;
+    color: #0000007c;
+    font-family: sans-serif;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 1%;
+    }
+
+    #desc{
+    font-size:large;
+    }
+
+    #login_button{
+        background-color: #b6b9be8a;
+        color: #3b3535;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 10px;
+        border-radius: 5%;
+        margin: auto;
+       
+    }
+
+    #login_button_form{
+        position: absolute;
+        top: 0;
+        right: 5%;
+    }
+
+    .gallery{
+        position: absolute;
+        top: 10%;
+    }
+
+    #img1{
+        position: relative;
+        top: 50%; 
+        width: 50% ;
+        height: 50%;
+    }
+
+    #p1{
+        position: absolute;
+        top: 20%;
+        margin: auto;
+        width: 70%;
+        right: 10%;
+    }
+    #img_div{
+        position: relative;
+        top: 20%;
+        margin: auto;
+    }
+
+    #image-upload{
+        position: absolute;
+        top: 75%;
+        margin: auto;
+        left: 30%;
+    }
+    
+    #image-viewer{
+        position: relative;
+        top: 170px;
+        margin: auto;
+        left: 0px;
+        width: 250px;
+        height: 250px;
+        max-width: 300px;
+        max-height: 300px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        display: none;
+    }
+
+    #image-viewer img {
+        max-width: 100%;
+         max-height: 100%;
+    }
+
+    
+    #submit_button_form{
+        position: absolute;
+        bottom: 18%;
+        right: 45%;
+    }
+    #img_submit_button{
+        background-color: #b6b9be8a;
+        color: #3b3535;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 10px;
+        border-radius: 5%;
+        margin: auto;
+    }
+
+</style>    
+</head>
+
+<body>
+
+	<h1 class="headerTitle">What's It</h1>
+	<p class="headerTitle" id="desc">Please fill this form with your correct and true details</p>
+
+    <form id="login_button_form" action="http://127.0.0.1:5000/login" method="get">
+		
+		<p><input id="login_button" type="submit" value="login"/></p>
+
+	</form>
+    <div id="img_div">
+        <div class="gallery">
+              <img id="img1" src="/img/homeImg.png" alt="Cinque Terre" >
+            
+        </div>
+        <p id="p1">
+            When we have any product in a shop or somewhere else,
+            when we go to buy it, we cannot know the full details as much as we need. 
+            The reason is that the cover containing it contains minimum information or sometimes the necessary information may be lost. 
+            Also, the information is in very small print, so it may not be readable. 
+            For this, it is possible to scan a relevant product through a new app on the mobile phone and find out its information.
+    
+        </p>
+
+    </div>
+    
+    
+    <input type="file" id="image-upload" accept="image/*">
+    <div id="image-viewer"></div>
+
+    <form id="submit_button_form" action="http://127.0.0.1:5000/item_description" method="get">
+		
+		<p><input id="img_submit_button" type="submit" value="submit_img"/></p>
+
+	</form>
+</body>
+</html>
+
+<script>
+    const imageUpload = document.getElementById('image-upload');
+    const imageViewer = document.getElementById('image-viewer');
+
+    imageUpload.addEventListener('change', function() {
+    const file = this.files[0];
+  
+    if (file) {
+        const reader = new FileReader();
+    
+    reader.addEventListener('load', function() {
+      imageViewer.style.display = 'block';
+      imageViewer.innerHTML = '<img src="' + this.result + '">';
+    });
+    
+         reader.readAsDataURL(file);
+        }
+    });
+
+</script>
